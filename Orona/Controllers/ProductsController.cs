@@ -60,7 +60,7 @@ namespace Orona.Controllers
             return BadRequest("This product already exists");
         }
 
-        [HttpPut]
+        [HttpPut("{id}")]
         public async Task<IActionResult> UpdateProduct(int id, [FromBody] ProductUpdateDto productUpdateDto)
         {
             if(productUpdateDto == null)
@@ -80,15 +80,10 @@ namespace Orona.Controllers
 
             _mapper.Map(productUpdateDto, product);
 
-            var ifProductExists = await _unitOfWork.Product.ProductExistAsync(product);
-            if(ifProductExists == null)
-            {
-                await _unitOfWork.Product.UpdateAsync(product);
-                await _unitOfWork.SaveAsync();
-                return NoContent();
-            }
+            await _unitOfWork.Product.UpdateAsync(product);
+            await _unitOfWork.SaveAsync();
 
-            return BadRequest("This product already exists");
+            return NoContent();
         }
 
         [HttpDelete("{id}")]
