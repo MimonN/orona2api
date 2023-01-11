@@ -40,6 +40,8 @@ namespace Orona.Controllers
                 return BadRequest(new RegistrationResponseDto { Errors = errors });
             }
 
+            await _userManager.AddToRoleAsync(user, "Customer");
+
             return StatusCode(201);
         }
 
@@ -52,7 +54,7 @@ namespace Orona.Controllers
                 return Unauthorized(new AuthResponseDto { ErrorMessage = "Invalid Authentication" });
 
             var signingCredentials = _jwtHandler.GetSigningCredentials();
-            var claims = _jwtHandler.GetClaims(user);
+            var claims = await _jwtHandler.GetClaims(user);
             var tokenOptions = _jwtHandler.GenerateTokenOptions(signingCredentials, claims);
             var token = new JwtSecurityTokenHandler().WriteToken(tokenOptions);
 
