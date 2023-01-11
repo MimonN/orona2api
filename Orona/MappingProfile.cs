@@ -11,6 +11,9 @@ namespace Orona
             CreateMap<Product, ProductDto>().ReverseMap();
             CreateMap<Product, ProductUpdateDto>().ReverseMap();
             CreateMap<Product, ProductCreateDto>().ReverseMap();
+
+            CreateMap<UserForRegistrationDto, User>()
+                .ForMember(u => u.UserName, opt => opt.MapFrom(x => x.Email));
         }
     }
 }

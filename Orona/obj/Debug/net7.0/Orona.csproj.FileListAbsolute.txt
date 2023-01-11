@@ -850,3 +850,8 @@ C:\Users\maned\Documents\LearningToCode\ORONATWO\orona2api\Orona\obj\Debug\net7.
 C:\Users\maned\Documents\LearningToCode\ORONATWO\orona2api\Orona\obj\Debug\net7.0\Orona.pdb
 C:\Users\maned\Documents\LearningToCode\ORONATWO\orona2api\Orona\obj\Debug\net7.0\Orona.genruntimeconfig.cache
 C:\Users\maned\Documents\LearningToCode\ORONATWO\orona2api\Orona\obj\Debug\net7.0\ref\Orona.dll
+C:\Users\maned\Documents\LearningToCode\ORONATWO\orona2api\Orona\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\maned\Documents\LearningToCode\ORONATWO\orona2api\Orona\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\maned\Documents\LearningToCode\ORONATWO\orona2api\Orona\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\maned\Documents\LearningToCode\ORONATWO\orona2api\Orona\bin\Debug\net7.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\maned\Documents\LearningToCode\ORONATWO\orona2api\Orona\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
