@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.IdentityModel.Tokens;
+using Orona.JwtFeatures;
 using Repository;
 using System.Text;
 
@@ -63,6 +64,7 @@ builder.Services.AddAuthentication(opt =>
             .GetBytes(jwtSettings.GetSection("securityKey").Value))
     };
 });
+builder.Services.AddScoped<JwtHandler>();
 
 var app = builder.Build();
 
