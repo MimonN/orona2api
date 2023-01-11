@@ -3,6 +3,7 @@ using Contracts;
 using Entities;
 using Entities.DataTransferObjects;
 using Entities.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -36,6 +37,7 @@ namespace Orona.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public async Task<IActionResult> CreateProduct([FromBody] ProductCreateDto productCreateDto)
         {
             if(productCreateDto == null)
@@ -61,6 +63,7 @@ namespace Orona.Controllers
         }
 
         [HttpPut("{id}")]
+        [Authorize]
         public async Task<IActionResult> UpdateProduct(int id, [FromBody] ProductUpdateDto productUpdateDto)
         {
             if(productUpdateDto == null)
@@ -87,6 +90,7 @@ namespace Orona.Controllers
         }
 
         [HttpDelete("{id}")]
+        [Authorize]
         public async Task<IActionResult> DeleteProduct(int id)
         {
             var product = await _unitOfWork.Product.GetFirstOrDefaultAsync(x => x.Id == id);
