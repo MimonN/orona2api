@@ -16,7 +16,7 @@ namespace Orona.Controllers
         private IUnitOfWork _unitOfWork;
         private IMapper _mapper;
 
-        public ProductsController(ApplicationDbContext db, IMapper mapper, IUnitOfWork unitOfWork)
+        public ProductsController(IMapper mapper, IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
             _mapper = mapper;

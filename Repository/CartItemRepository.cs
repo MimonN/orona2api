@@ -24,7 +24,11 @@ namespace Repository
         //    var productExists = await _db.Products.AsNoTracking().FirstOrDefaultAsync(p => p.WindowType == obj.WindowType);
         //    return productExists;
         //}
-
+        public async Task<CartItem> GetCartItemByUsernameAndProductId(string username, int ProductId)
+        {
+            var cartItem = _db.CartItems.FirstOrDefault(x => x.UserName == username && x.ProductId == ProductId);
+            return cartItem;
+        }
         public async Task UpdateAsync(CartItem obj)
         {
             _db.CartItems.Update(obj);

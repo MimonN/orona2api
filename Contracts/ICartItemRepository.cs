@@ -11,5 +11,6 @@ namespace Contracts
     {
         Task UpdateAsync(CartItem obj);
         //Task<CartItem> ProductExistAsync(CartItem obj);
+        Task<CartItem> GetCartItemByUsernameAndProductId(string username, int ProductId);
     }
 }
