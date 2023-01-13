@@ -9,6 +9,7 @@ namespace Contracts
     public interface IUnitOfWork
     {
         IProductRepository Product { get; }
+        ICartItemRepository CartItem { get; }
 
         Task SaveAsync();
     }

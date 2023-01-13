@@ -18,8 +18,10 @@ namespace Repository
             _db = db;
             _mapper = mapper;
             Product = new ProductRepository(_db);
+            CartItem = new CartItemRepository(_db);
         }
         public IProductRepository Product { get; private set; }
+        public ICartItemRepository CartItem { get; private set; }
 
         public async Task SaveAsync()
         {

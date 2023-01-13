@@ -37,7 +37,7 @@ namespace Orona.Controllers
         }
 
         [HttpPost]
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> CreateProduct([FromBody] ProductCreateDto productCreateDto)
         {
             if(productCreateDto == null)
@@ -63,7 +63,7 @@ namespace Orona.Controllers
         }
 
         [HttpPut("{id}")]
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> UpdateProduct(int id, [FromBody] ProductUpdateDto productUpdateDto)
         {
             if(productUpdateDto == null)
@@ -90,7 +90,7 @@ namespace Orona.Controllers
         }
 
         [HttpDelete("{id}")]
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteProduct(int id)
         {
             var product = await _unitOfWork.Product.GetFirstOrDefaultAsync(x => x.Id == id);
