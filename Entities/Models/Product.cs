@@ -17,6 +17,7 @@ namespace Entities.Models
         [Required]
         [Range(1,100)]
         public double Price { get; set; }
+        [Required]
         public string ImageUrl { get; set; }
     }
 }

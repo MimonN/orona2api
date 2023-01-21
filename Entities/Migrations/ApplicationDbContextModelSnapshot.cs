@@ -47,6 +47,44 @@ namespace Entities.Migrations
                     b.ToTable("CartItems");
                 });
 
+            modelBuilder.Entity("Entities.Models.EstimateRequest", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("Created")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Message")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Note")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("Updated")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("EstimateRequests");
+                });
+
             modelBuilder.Entity("Entities.Models.Product", b =>
                 {
                     b.Property<int>("Id")
@@ -177,13 +215,13 @@ namespace Entities.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "ce7fc77b-bdc6-4945-8ee5-469cceb6acf0",
+                            Id = "13a61179-2b6c-420b-bf08-1b5de5acec3f",
                             Name = "Customer",
                             NormalizedName = "CUSTOMER"
                         },
                         new
                         {
-                            Id = "faee204c-e2e2-43fe-84b0-e4ac27b49962",
+                            Id = "7750b672-b3d6-4807-a9e5-d65211276d01",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         });

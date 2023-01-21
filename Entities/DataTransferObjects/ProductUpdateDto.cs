@@ -9,9 +9,13 @@ namespace Entities.DataTransferObjects
 {
     public class ProductUpdateDto
     {
+        [Required]
         public string Description { get; set; }
+        [Required]
         public double Price { get; set; }
+        [Required]
         public string WindowType { get; set; }
+        [Required]
         public string ImageUrl { get; set; }
     }
 }

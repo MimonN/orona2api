@@ -68,7 +68,7 @@ namespace Orona.Controllers
         {
             if(productUpdateDto == null)
             {
-                return BadRequest("Produc object is null");
+                return BadRequest("Product object is null");
             }
             if(!ModelState.IsValid)
             {

@@ -4,17 +4,13 @@ using Entities;
 using Entities.DataTransferObjects;
 using Entities.Models;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System.Data;
-using System.Runtime.CompilerServices;
-using System.Security.Claims;
 
 namespace Orona.Controllers
 {
     [Route("api/[controller]/[action]")]
     [ApiController]
-    //[Authorize]
+    [Authorize]
     public class CartItemsController : ControllerBase
     {
         private IUnitOfWork _unitOfWork;
@@ -26,44 +22,43 @@ namespace Orona.Controllers
             _mapper = mapper;
         }
 
-        [HttpGet]
+        [HttpGet("{username}")]
         public async Task<IActionResult> GetCartItemsByUserName(string username)
         {
-            IEnumerable<CartItem> cartItems = await _unitOfWork.CartItem.GetAllAsync(x => x.UserName == username);
+            IEnumerable<CartItem> cartItems = await _unitOfWork.CartItem.GetAllAsync(x => x.UserName == username, includeProperties: "Product");
             return Ok(cartItems);
         }
 
         [HttpPost]
-        public async Task<IActionResult> UpsertCartItem([FromBody] CartItemCreateDto cartItemCreateDto)
+        public async Task<IActionResult> UpsertCartItem([FromBody] CartItemCreateDto cartItemDto)
         {
-            if(cartItemCreateDto == null)
+            if(cartItemDto != null)
             {
-                if (cartItemCreateDto == null || !ModelState.IsValid)
+                if (!ModelState.IsValid)
                 {
                     return BadRequest();
                 }
                 else
                 {
-                    var cartItem = _mapper.Map<CartItem>(cartItemCreateDto);
-
-                    await _unitOfWork.CartItem.AddAsync(cartItem);
-                    await _unitOfWork.SaveAsync();
-                    return Ok();
+                    var cartItemExists = await _unitOfWork.CartItem.GetCartItemByUsernameAndProductId(cartItemDto.UserName, cartItemDto.ProductId);
+                    if(cartItemExists != null)
+                    {
+                        cartItemExists.Count += cartItemDto.Count;
+                        await _unitOfWork.CartItem.UpdateAsync(cartItemExists);
+                        await _unitOfWork.SaveAsync();
+                        return Ok();
+                    }
+                    else
+                    {
+                        var cartItem = _mapper.Map<CartItem>(cartItemDto);
+                        await _unitOfWork.CartItem.AddAsync(cartItem);
+                        await _unitOfWork.SaveAsync();
+                        return Ok();
+                    }
                 }
             }
-            else
-            {
-                if (cartItemCreateDto != null && ModelState.IsValid)
-                {
-                    var cartItem = await _unitOfWork.CartItem.GetCartItemByUsernameAndProductId(cartItemCreateDto.UserName, cartItemCreateDto.ProductId);
-                    _mapper.Map(cartItemCreateDto, cartItem);
-                    await _unitOfWork.CartItem.UpdateAsync(cartItem);
-                    await _unitOfWork.SaveAsync();
-                    return Ok();
-                }
+            return BadRequest();
 
-                return BadRequest();
-            }
         }
 
         [HttpPut]
@@ -110,3 +105,4 @@ namespace Orona.Controllers
         }
     }
 }
+

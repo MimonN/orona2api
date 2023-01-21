@@ -29,5 +29,6 @@ namespace Entities
 
         public DbSet<Product> Products { get; set; }
         public DbSet<CartItem> CartItems { get; set; }
+        public DbSet<EstimateRequest> EstimateRequests { get; set; } 
     }
 }
