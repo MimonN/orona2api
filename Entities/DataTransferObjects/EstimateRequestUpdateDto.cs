@@ -14,6 +14,8 @@ namespace Entities.DataTransferObjects
         [Required]
         public string Email { get; set; }
         [Required]
+        public string Phone { get; set; }
+        [Required]
         public string Message { get; set; }
         public string? Note { get; set; }
         [Required]

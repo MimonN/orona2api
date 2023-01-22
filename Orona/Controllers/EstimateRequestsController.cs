@@ -23,7 +23,7 @@ namespace Orona.Controllers
         }
 
         [HttpGet]
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> GetAllEstimates()
         {
             IEnumerable<EstimateRequest> estimates = await _unitOfWork.EstimateRequest.GetAllAsync();
@@ -31,7 +31,7 @@ namespace Orona.Controllers
         }
 
         [HttpGet("{id}")]
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> GetEstimateById(int id)
         {
             var estimate = await _unitOfWork.EstimateRequest.GetFirstOrDefaultAsync(x => x.Id == id);
@@ -63,7 +63,7 @@ namespace Orona.Controllers
         }
 
         [HttpPut("{id}")]
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> UpdateEstimate(int id, [FromBody] EstimateRequestUpdateDto estimateUpdateDto)
         {
             if(estimateUpdateDto == null)
@@ -91,7 +91,7 @@ namespace Orona.Controllers
         }
 
         [HttpDelete("{id}")]
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteEstimate(int id)
         {
             var estimate = await _unitOfWork.EstimateRequest.GetFirstOrDefaultAsync(x => x.Id == id);
