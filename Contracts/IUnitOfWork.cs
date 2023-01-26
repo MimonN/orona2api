@@ -12,6 +12,8 @@ namespace Contracts
         IProductRepository Product { get; }
         ICartItemRepository CartItem { get; }
         IEstimateRequestRepository EstimateRequest { get; }
+        IOrderHeaderRepository OrderHeader { get; }
+        IOrderDetailRepository OrderDetail { get; }
 
         Task SaveAsync();
     }

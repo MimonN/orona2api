@@ -16,6 +16,12 @@ namespace Orona
             CreateMap<EstimateRequest, EstimateRequestUpdateDto>().ReverseMap();
             CreateMap<EstimateRequest, EstimateRequestCreateDto>().ReverseMap();
 
+            CreateMap<OrderDetail, OrderDetailDto>().ReverseMap();
+            CreateMap<OrderDetail, OrderDetailCreateDto>().ReverseMap();
+
+            CreateMap<OrderHeader, OrderHeaderDto>().ReverseMap();
+            CreateMap<OrderHeader, OrderHeaderCreateDto>().ReverseMap();
+
             CreateMap<UserForRegistrationDto, User>()
                 .ForMember(u => u.UserName, opt => opt.MapFrom(x => x.Email));
 

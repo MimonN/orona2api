@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using Contracts;
-using Entities;
 using Entities.DataTransferObjects;
 using Entities.Models;
 using Microsoft.AspNetCore.Authorization;
@@ -99,6 +98,20 @@ namespace Orona.Controllers
             }
 
             _unitOfWork.CartItem.Remove(cartItem);
+            await _unitOfWork.SaveAsync();
+
+            return NoContent();
+        }
+
+        [HttpDelete]
+        public async Task<IActionResult> RemoveRange([FromBody] CartItem[] cartItems)
+        {
+            if(cartItems == null)
+            {
+                return BadRequest("Object is null");
+            }
+
+            _unitOfWork.CartItem.RemoveRange(cartItems);
             await _unitOfWork.SaveAsync();
 
             return NoContent();
