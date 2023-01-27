@@ -21,6 +21,7 @@ namespace Orona
 
             CreateMap<OrderHeader, OrderHeaderDto>().ReverseMap();
             CreateMap<OrderHeader, OrderHeaderCreateDto>().ReverseMap();
+            CreateMap<OrderHeader, OrderHeaderUpdateDto>().ReverseMap();
 
             CreateMap<UserForRegistrationDto, User>()
                 .ForMember(u => u.UserName, opt => opt.MapFrom(x => x.Email));

@@ -22,22 +22,6 @@ namespace Orona.Controllers
             _mapper = mapper;
         }
 
-        [HttpGet]
-        //[Authorize(Roles = "Admin")]
-        public async Task<IActionResult> GetAllOrderDetails()
-        {
-            IEnumerable<OrderDetail> orderDetails = await _unitOfWork.OrderDetail.GetAllAsync(null, includeProperties: "OrderHeader,Product");
-            return Ok(orderDetails);
-        }
-
-        [HttpGet("{id}")]
-        //[Authorize(Roles = "Admin")]
-        public async Task<IActionResult> GetOrderDetailById(int id)
-        {
-            var orderDetail = await _unitOfWork.OrderDetail.GetFirstOrDefaultAsync(x => x.Id == id);
-            return Ok(orderDetail);
-        }
-
         [HttpPost]
         [Authorize]
         public async Task<IActionResult> CreateOrderHeader([FromBody] OrderHeaderCreateDto headerDto)
@@ -57,6 +41,7 @@ namespace Orona.Controllers
             orderHeader.Id = new Guid();
             orderHeader.OrderDate = DateTime.Now;
             orderHeader.OrderStatus = "New";
+            orderHeader.PaymentStatus = "Not Paid";
             await _unitOfWork.OrderHeader.AddAsync(orderHeader);
             await _unitOfWork.SaveAsync();
             return Ok(orderHeader.Id);
@@ -83,48 +68,6 @@ namespace Orona.Controllers
             return NoContent();
         }
 
-        //[HttpPut("{id}")]
-        ////[Authorize(Roles = "Admin")]
-        //public async Task<IActionResult> UpdateOrderDetail(int id, [FromBody] OrderDetailsUpdateDto orderDetailUpdateDto)
-        //{
-        //    if(orderDetailUpdateDto == null)
-        //    {
-        //        return BadRequest("OrderDetail object is null");
-        //    }
-        //    if(!ModelState.IsValid)
-        //    {
-        //        return BadRequest("Invalid model object");
-        //    }
-
-        //    var orderDetail = await _unitOfWork.OrderDetails.GetFirstOrDefaultAsync(x => x.Id == id);
-        //    if(orderDetail == null)
-        //    {
-        //        return NotFound($"OrderDetail with id: {id} has not been found in db.");
-        //    }
-
-        //    _mapper.Map(orderDetailUpdateDto, orderDetail);
-        //    orderDetail.UpdateTime = DateTime.Now;
-
-        //    await _unitOfWork.OrderDetails.UpdateAsync(orderDetail);
-        //    await _unitOfWork.SaveAsync();
-
-        //    return NoContent();
-        //}
-
-        //[HttpDelete("{id}")]
-        ////[Authorize(Roles = "Admin")]
-        //public async Task<IActionResult> DeleteOrderDetail(int id)
-        //{
-        //    var orderDetail = await _unitOfWork.OrderDetails.GetFirstOrDefaultAsync(x => x.Id == id);
-        //    if(orderDetail == null)
-        //    {
-        //        return NotFound();
-        //    }
-
-        //    _unitOfWork.OrderDetails.Remove(orderDetail);
-        //    await _unitOfWork.SaveAsync();
-
-        //    return NoContent();
-        //}
+        
     }
 }
