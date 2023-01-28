@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orona", "Orona\Orona.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entities", "Entities\Entities.csproj", "{1D6A79F4-3C73-4087-A1C6-F98908A83415}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contracts", "Contracts\Contracts.csproj", "{2A4B5C22-CA7E-43C3-B9DA-6A9E7735A5D7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contracts", "Contracts\Contracts.csproj", "{2A4B5C22-CA7E-43C3-B9DA-6A9E7735A5D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Repository\Repository.csproj", "{EF04459F-22C9-48E4-8189-8150BA705F18}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repository", "Repository\Repository.csproj", "{EF04459F-22C9-48E4-8189-8150BA705F18}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "Angular", "Angular\Angular.esproj", "{11E63908-B4B1-47D8-9887-BA252DAE1C8F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,12 @@ Global
 		{EF04459F-22C9-48E4-8189-8150BA705F18}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF04459F-22C9-48E4-8189-8150BA705F18}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF04459F-22C9-48E4-8189-8150BA705F18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11E63908-B4B1-47D8-9887-BA252DAE1C8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11E63908-B4B1-47D8-9887-BA252DAE1C8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11E63908-B4B1-47D8-9887-BA252DAE1C8F}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{11E63908-B4B1-47D8-9887-BA252DAE1C8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11E63908-B4B1-47D8-9887-BA252DAE1C8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11E63908-B4B1-47D8-9887-BA252DAE1C8F}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
