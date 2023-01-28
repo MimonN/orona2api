@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cmoXb00OzbWgiPaxwqfuIb2YhQ9dP7VWzRq6QmMcHG+0SThjtnz0Is2TFTyHXs5ieWoY1xN6nzunJmwrObagpA==",
+  "dgSpecHash": "hRHnrARhDDLCIPqbYNV8b35xJog+hDICBBYYzfuDOJ/gZmPdjUT2dam1yepDXXxYALHUx8S72DKFPOu6YzraOQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\maned\\Documents\\LearningToCode\\ORONATWO\\orona2api\\Orona\\Orona.csproj",
+  "projectFilePath": "C:\\Users\\maned\\Documents\\LearningToCode\\DEPLOYMENT\\Orona\\Orona\\Orona.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\maned\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\maned\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
