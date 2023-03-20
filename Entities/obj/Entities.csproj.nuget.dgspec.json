@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\maned\\Documents\\LearningToCode\\ORONATWO\\orona2api\\Entities\\Entities.csproj": {}
+    "C:\\Users\\maned\\Documents\\LearningToCode\\DEPLOYMENT\\Orona\\Entities\\Entities.csproj": {}
   },
   "projects": {
-    "C:\\Users\\maned\\Documents\\LearningToCode\\ORONATWO\\orona2api\\Entities\\Entities.csproj": {
+    "C:\\Users\\maned\\Documents\\LearningToCode\\DEPLOYMENT\\Orona\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\maned\\Documents\\LearningToCode\\ORONATWO\\orona2api\\Entities\\Entities.csproj",
+        "projectUniqueName": "C:\\Users\\maned\\Documents\\LearningToCode\\DEPLOYMENT\\Orona\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "C:\\Users\\maned\\Documents\\LearningToCode\\ORONATWO\\orona2api\\Entities\\Entities.csproj",
+        "projectPath": "C:\\Users\\maned\\Documents\\LearningToCode\\DEPLOYMENT\\Orona\\Entities\\Entities.csproj",
         "packagesPath": "C:\\Users\\maned\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\maned\\Documents\\LearningToCode\\ORONATWO\\orona2api\\Entities\\obj\\",
+        "outputPath": "C:\\Users\\maned\\Documents\\LearningToCode\\DEPLOYMENT\\Orona\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\maned\\AppData\\Roaming\\NuGet\\NuGet.Config",
