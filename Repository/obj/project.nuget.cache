@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tlRNkI4I7tyd2qfb9eHHChYjcFCsodcaoaNAjW+bUsq0NehwjQ5hi/47htdbob8Q3PwHjePT0QXOwd8T+qJbAQ==",
+  "dgSpecHash": "WkfTPmw5Xxhg7IdLYTe9SOnPXOpryMjZNmxO0jfCfqCHRZ+BsmZecQmrbA6W8V0BD7Hf1923is5Om/mo6CfdyQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\maned\\Documents\\LearningToCode\\DEPLOYMENT\\Orona\\Repository\\Repository.csproj",
+  "projectFilePath": "C:\\Users\\maned\\Documents\\LearningToCode\\ORONATWO\\orona2api\\Repository\\Repository.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\maned\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\maned\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",

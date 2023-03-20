@@ -1147,3 +1147,4 @@ C:\Users\maned\Documents\LearningToCode\DEPLOYMENT\Orona\Orona\obj\Debug\net7.0\
 C:\Users\maned\Documents\LearningToCode\DEPLOYMENT\Orona\Orona\obj\Debug\net7.0\Orona.genruntimeconfig.cache
 C:\Users\maned\Documents\LearningToCode\DEPLOYMENT\Orona\Orona\obj\Debug\net7.0\ref\Orona.dll
 C:\Users\maned\Documents\LearningToCode\DEPLOYMENT\Orona\Orona\bin\Debug\net7.0\Orona.staticwebassets.runtime.json
+C:\Users\maned\Documents\LearningToCode\ORONATWO\orona2api\Orona\bin\Debug\net7.0\Orona.staticwebassets.runtime.json

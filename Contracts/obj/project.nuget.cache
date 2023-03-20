@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tMhg50qXiP3Z/tT483jKueOOi1M+zQpQ+tbd+hP/V8uZ5i5MECn331OSDhtIdYIe3w9vK0C+dYt1AC1t9AXupQ==",
+  "dgSpecHash": "HILerHrn2HyixfrkzEiZEL+IvmqjBUr2KGXh5DDJBzguYPXym4qa7yFe8CTuxMtbjT1LrqjbD3HkzIdzOkJLbw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\maned\\Documents\\LearningToCode\\DEPLOYMENT\\Orona\\Contracts\\Contracts.csproj",
+  "projectFilePath": "C:\\Users\\maned\\Documents\\LearningToCode\\ORONATWO\\orona2api\\Contracts\\Contracts.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\maned\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\maned\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

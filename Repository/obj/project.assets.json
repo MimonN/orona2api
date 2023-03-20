@@ -6159,11 +6159,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\maned\\Documents\\LearningToCode\\DEPLOYMENT\\Orona\\Repository\\Repository.csproj",
+      "projectUniqueName": "C:\\Users\\maned\\Documents\\LearningToCode\\ORONATWO\\orona2api\\Repository\\Repository.csproj",
       "projectName": "Repository",
-      "projectPath": "C:\\Users\\maned\\Documents\\LearningToCode\\DEPLOYMENT\\Orona\\Repository\\Repository.csproj",
+      "projectPath": "C:\\Users\\maned\\Documents\\LearningToCode\\ORONATWO\\orona2api\\Repository\\Repository.csproj",
       "packagesPath": "C:\\Users\\maned\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\maned\\Documents\\LearningToCode\\DEPLOYMENT\\Orona\\Repository\\obj\\",
+      "outputPath": "C:\\Users\\maned\\Documents\\LearningToCode\\ORONATWO\\orona2api\\Repository\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\maned\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6180,11 +6180,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\maned\\Documents\\LearningToCode\\DEPLOYMENT\\Orona\\Contracts\\Contracts.csproj": {
-              "projectPath": "C:\\Users\\maned\\Documents\\LearningToCode\\DEPLOYMENT\\Orona\\Contracts\\Contracts.csproj"
+            "C:\\Users\\maned\\Documents\\LearningToCode\\ORONATWO\\orona2api\\Contracts\\Contracts.csproj": {
+              "projectPath": "C:\\Users\\maned\\Documents\\LearningToCode\\ORONATWO\\orona2api\\Contracts\\Contracts.csproj"
             },
-            "C:\\Users\\maned\\Documents\\LearningToCode\\DEPLOYMENT\\Orona\\Entities\\Entities.csproj": {
-              "projectPath": "C:\\Users\\maned\\Documents\\LearningToCode\\DEPLOYMENT\\Orona\\Entities\\Entities.csproj"
+            "C:\\Users\\maned\\Documents\\LearningToCode\\ORONATWO\\orona2api\\Entities\\Entities.csproj": {
+              "projectPath": "C:\\Users\\maned\\Documents\\LearningToCode\\ORONATWO\\orona2api\\Entities\\Entities.csproj"
             }
           }
         }
@@ -6224,7 +6224,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
