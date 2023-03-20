@@ -3,6 +3,7 @@ using Contracts;
 using Entities;
 using Entities.DataTransferObjects;
 using Entities.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -15,7 +16,7 @@ namespace Orona.Controllers
         private IUnitOfWork _unitOfWork;
         private IMapper _mapper;
 
-        public ProductsController(ApplicationDbContext db, IMapper mapper, IUnitOfWork unitOfWork)
+        public ProductsController(IMapper mapper, IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
             _mapper = mapper;
@@ -36,6 +37,7 @@ namespace Orona.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> CreateProduct([FromBody] ProductCreateDto productCreateDto)
         {
             if(productCreateDto == null)
@@ -61,11 +63,12 @@ namespace Orona.Controllers
         }
 
         [HttpPut("{id}")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> UpdateProduct(int id, [FromBody] ProductUpdateDto productUpdateDto)
         {
             if(productUpdateDto == null)
             {
-                return BadRequest("Produc object is null");
+                return BadRequest("Product object is null");
             }
             if(!ModelState.IsValid)
             {
@@ -87,6 +90,7 @@ namespace Orona.Controllers
         }
 
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteProduct(int id)
         {
             var product = await _unitOfWork.Product.GetFirstOrDefaultAsync(x => x.Id == id);
