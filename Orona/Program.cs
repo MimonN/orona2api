@@ -51,7 +51,8 @@ builder.Services.AddSwaggerGen(options =>
 });
 builder.Services.AddDbContext<ApplicationDbContext>(option =>
 {
-    option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+    option.UseSqlServer(Environment.GetEnvironmentVariable("OronaDbConnection"));
+    //option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 builder.Services.AddAutoMapper(typeof(Program));
 builder.Services.AddCors(options =>
